@@ -49,8 +49,20 @@ var employees = [
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
-
-//Code Here
+function employeeUpdater(){
+  let delInd = 0;
+  for (var i = 0; i < employees.length; i++){
+    if(employees[i].firstName === 'Theo') {
+      // employees.splice(i, 1);
+      delInd = i;
+    }else if (employees[i].firstName === 'Lorie'){
+      employees[i]. department = 'HR';
+    }
+  }
+  employees.splice(delInd,1);
+  return employees;
+}
+console.log(employeeUpdater());
 
 
 
@@ -68,7 +80,6 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
 
 
 
@@ -97,8 +108,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+ var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -158,5 +169,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
+let newArr = looper.map(function(element, index, array){
+  if (element % 2 === 1){
+    return odd;
+  }else {
+    if (element % 2 === 0){
+      return even;
+    }
+  }
+
+  
+});
 
 
